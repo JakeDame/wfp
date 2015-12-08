@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @book.issue %>
+</p>
+
+<p>
+  <strong>Writer:</strong>
+  <%= @book.writer %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @book.artist %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= @book.cover %>
+</p>
+
+<p>
+  <strong>Releasedate:</strong>
+  <%= @book.releaseDate %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
