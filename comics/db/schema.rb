@@ -14,15 +14,18 @@
 ActiveRecord::Schema.define(version: 20151208014708) do
 
   create_table "books", force: :cascade do |t|
+    t.integer  "publisher_id"
     t.string   "title"
     t.integer  "issue"
     t.string   "writer"
     t.string   "artist"
     t.string   "cover"
     t.string   "releaseDate"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
+
+  add_index "books", ["publisher_id"], name: "index_books_on_publisher_id"
 
   create_table "publishers", force: :cascade do |t|
     t.string   "name"
