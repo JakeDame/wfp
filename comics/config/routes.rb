@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :books
-  resources :titles
-  resources :publishers
   devise_for :users
-  root to: "home#index"
+
+  resources :publishers do
+    resources :books, shallow: true
+  end
+
+  root "publisher#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
