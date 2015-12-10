@@ -3,20 +3,20 @@
 <h1>Releasing This Week:</h1>
 
 <% @publishers.each do |pub| %>
-  <h3><%= pub.name %></h3>
+  <h2><%= pub.name %></h2>
     <% if pub.name == "DC" %>
       <% pub.books.each do |dc| %>
-        <%= link_to image_tag(root_url + "/books/" + dc.cover, size: "100x100"), dc %>
+        <%= link_to image_tag(root_url + "/images/" + dc.cover, size: "120x200"), dc %>
         <%= dc.title %>
       <%end %>
     <% elsif pub.name == "Marvel" %>
       <% pub.books.each do |marv| %>
-        <%= marv.cover %>
+        <%= link_to image_tag(root_url + "/images/" + marv.cover, size: "120x200"), marv %>
         <%= marv.title %>
       <%end %>
     <% elsif pub.name == "Image" %>
       <% pub.books.each do |img| %>
-        <%= img.cover %>
+        <%= link_to image_tag(root_url + "/images/" + img.cover, size: "120x200"), img %>
         <%= img.title %>
       <%end %>
     <% end %>

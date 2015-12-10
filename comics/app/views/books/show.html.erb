@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Cover:</strong>
+  <%= image_tag(root_url + "/images/" + @book.cover, size: "240x400") %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @book.title %>
 </p>
@@ -20,10 +25,6 @@
   <%= @book.artist %>
 </p>
 
-<p>
-  <strong>Cover:</strong>
-  <%= @book.cover %>
-</p>
 
 <p>
   <strong>Releasedate:</strong>
@@ -31,4 +32,4 @@
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Back', publishers_path %>
