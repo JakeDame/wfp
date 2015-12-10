@@ -2,13 +2,11 @@ class PublishersController < ApplicationController
   before_action :set_publisher, only: [:show, :edit, :update, :destroy]
 
   # GET /publishers
-  # GET /publishers.json
   def index
     @publishers = Publisher.all
   end
 
   # GET /publishers/1
-  # GET /publishers/1.json
   def show
   end
 
@@ -22,18 +20,15 @@ class PublishersController < ApplicationController
   end
 
   # POST /publishers
-  # POST /publishers.json
   def create
     @publisher = Publisher.new(publisher_params)
   end
 
   # PATCH/PUT /publishers/1
-  # PATCH/PUT /publishers/1.json
   def update
   end
 
   # DELETE /publishers/1
-  # DELETE /publishers/1.json
   def destroy
     @publisher.destroy
   end
