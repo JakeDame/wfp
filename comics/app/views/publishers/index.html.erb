@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Releasing This Week:</h1>
+<%= link_to "current_user_show", current_user %>
+
+<h1>Comic Sense</h1>
+
+<h2>Releasing This Week: <small>(12/9/15)</small></h2>
 
 <% @publishers.each do |pub| %>
   <h3><u><%= pub.name %></u></h3>

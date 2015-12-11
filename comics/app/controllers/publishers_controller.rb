@@ -8,6 +8,7 @@ class PublishersController < ApplicationController
 
   # GET /publishers/1
   def show
+    @user = current_user
   end
 
   # GET /publishers/new
