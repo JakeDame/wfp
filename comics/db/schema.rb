@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212050130) do
-
-  create_table "book_users", id: false, force: :cascade do |t|
-    t.integer "book_id"
-    t.integer "user_id"
-  end
-
-  add_index "book_users", ["book_id"], name: "index_book_users_on_book_id"
-  add_index "book_users", ["user_id"], name: "index_book_users_on_user_id"
+ActiveRecord::Schema.define(version: 20151212154404) do
 
   create_table "books", force: :cascade do |t|
     t.integer  "publisher_id"
@@ -34,6 +26,16 @@ ActiveRecord::Schema.define(version: 20151212050130) do
   end
 
   add_index "books", ["publisher_id"], name: "index_books_on_publisher_id"
+
+  create_table "catalogs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "publisher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "catalogs", ["user_id"], name: "index_catalogs_on_user_id"
 
   create_table "publishers", force: :cascade do |t|
     t.string   "name"

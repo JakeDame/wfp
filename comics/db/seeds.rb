@@ -13,14 +13,25 @@ publishers = Publisher.create(
   ]
 )
 
+catalogs = Catalog.create(
+  [
+    {title: "Batman 1", publisher: "DC", user_id: "1"},
+    {title: "Batman 2", publisher: "DC", user_id: "1"},
+    {title: "Batman 3", publisher: "DC", user_id: "1"},
+    {title: "Batman 4", publisher: "DC", user_id: "1"},
+    {title: "Batman 5", publisher: "DC", user_id: "1"},
+    {title: "Batman 6", publisher: "DC", user_id: "1"},
+    {title: "Batman 7", publisher: "DC", user_id: "1"},
+    {title: "Batman 8", publisher: "DC", user_id: "1"},
+    {title: "Batman 9", publisher: "DC", user_id: "1"},
+    {title: "The Walking Dead Compendium 1", publisher: "Image", user_id: "1"}
+  ]
+)
+
 books = Book.create(
   [
-    {title: "Superman 46", issue: 46, writer: "Gene Luen Yang", artist: "John Romita", cover: "s46.png", releaseDate: "11/25/15", publisher_id: 1},
-    {title: "The Dark Knight 3: The Master Race 1", issue: 1, writer: "Frank Miller", artist: "Andy Kubert", cover: "tdk1.png", releaseDate: "11/25/15", publisher_id: 1},
-    {title: "Wonder Woman 46", issue: 46, writer: "Meredith Finch", artist: "David Finch", cover: "ww46.png", releaseDate: "11/25/15", publisher_id: 1},
     {title: "Amazing Spider-man 4", issue: 4, writer: "Dan Slott", artist: "Guiseppe Camuncoli", cover: "asm4.png", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Deadpool 3", issue: 3, writer: "Gerry Duggan", artist: "Mike Hawthorne", cover: "dp3.png", releaseDate: "12/9/15", publisher_id: 2},
-    {title: "Darth Vader 13", issue: 13, writer: "Kieron Gillen", artist: "Salvador Larroca", cover: "darth13.png", releaseDate: "11/25/15", publisher_id: 2},
     {title: "The Walking Dead 149", issue: 149, writer: "Robert Kirkman", artist: "Charlie Adlard", cover: "twd149.png", releaseDate: "12/9/15", publisher_id: 3},
     {title: "Invincible 126", issue: 126, writer: "Robert Kirkman", artist: "Ryan Ottley", cover: "inv126.png", releaseDate: "11/25/15", publisher_id: 3},
     {title: "Saga 31", issue: 31, writer: "Brian K. Vaughan", artist: "Fiona Staples", cover: "saga31.png", releaseDate: "11/25/15", publisher_id: 3},
@@ -52,7 +63,6 @@ books = Book.create(
     {title: "Black Knight 2", issue: 2, writer: "Frank Tieri", artist: "Luca Pizzari", cover: "bk2.jpg", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Guardians of the Galaxy 3", issue: 3, writer: "Brian Michael Bendis", artist: "Valerio Schiti", cover: "gotg3.jpg", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Hercules 2", issue: 2, writer: "Dan Abnett", artist: "Luke Ross", cover: "herc2.jpg", releaseDate: "12/9/15", publisher_id: 2},
-    {title: "Scarlet Witch 1", issue: 1, writer: "James Robinson", artist: "Various", cover: "scar1.jpg", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Secret Wars 8", issue: 8, writer: "Jonathan Hickman", artist: "Esad Ribic", cover: "secwar8.jpg", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Spider-gwen 3", issue: 3, writer: "Jason Latour", artist: "Robbi Rodriguez", cover: "sgwen3.jpg", releaseDate: "12/9/15", publisher_id: 2},
     {title: "Spider-man 2099 4", issue: 4, writer: "Peter David", artist: "Will Sliney", cover: "sman20994.jpg", releaseDate: "12/9/15", publisher_id: 2},

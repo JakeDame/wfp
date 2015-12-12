@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%# link_to "current_user_show", current_user %>
-
 <div class="row">
   <div class="img">
     <%= image_tag(root_url+ "images/comics.png") %>
@@ -19,26 +17,22 @@
     <% if pub.name == "DC" %>
     <div class="row">
       <% pub.books.each do |dc| %>
-        <div class="small-2 columns end">
-          <div class="panel">
-            <div class="thumbnail">
+         <div class="small-2 columns end">
+          <div class="panel thumbnail">
               <%= link_to image_tag(root_url + "images/" + dc.cover), dc %>
-            </div><!-- class="thumbnail"-->
             <div class="container">
               <h6><%= dc.title %></h6>
             </div> <!-- class="container" -->
           </div> <!-- class="panel" -->
-        </div> <!-- class="small-4 columns end" -->
+         </div> <!-- class="small-4 columns end" -->
       <%end %> <!-- pub.books.each do |dc| -->
     </div>
     <% elsif pub.name == "Marvel" %>
     <div class="row">
       <% pub.books.each do |marv| %>
         <div class="small-2 columns end">
-          <div class="panel">
-            <div class="thumbnail">
+          <div class="panel thumbnail">
               <%= link_to image_tag(root_url + "images/" + marv.cover), marv %>
-             </div><!-- class="thumbnail"-->
              <div class="container">
                <h6><%= marv.title %></h6>
              </div> <!-- class="container" -->
@@ -50,10 +44,8 @@
     <div class="row">
       <% pub.books.each do |img| %>
         <div class="small-2 columns end">
-          <div class="panel">
-            <div class="thumbnail">
+          <div class="panel thumbnail">
               <%= link_to image_tag(root_url + "images/" + img.cover), img %>
-             </div><!-- class="thumbnail"-->
              <div class="container">
                <h6><%= img.title %></h6>
              </div> <!-- class="container" -->

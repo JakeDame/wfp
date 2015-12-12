@@ -10,6 +10,8 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @user = current_user
+    @catalog = @user.catalogs
   end
 
   # GET /books/new
@@ -46,6 +48,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :issue, :writer, :artist, :cover, :releaseDate)
+      params.require(:book).permit(:title, :issue, :writer, :artist, :cover, :releaseDate, :user_ids => [])
     end
 end

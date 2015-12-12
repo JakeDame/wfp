@@ -9,4 +9,28 @@
 <br>
 <h3>Username: <%= @user.username %></h3>
 <h3>Email: <%= @user.email %></h3>
-<h3>Collection</h3>
+<h3>Collection:</h3>
+
+<div class="row">
+<div class="small-4 columns">
+<table>
+  <thead>
+    <tr>
+      <th>Book Title</th>
+      <th>Publisher</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @user.catalogs.each do |cat| %>
+        <tr>
+          <td><%= cat.title %></td>
+          <td><%= cat.publisher %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
+<div class="small-8 columns">
+<%= link_to "Add To Collection", new_catalog_path, class: "button" %>
+</div>
+</div>

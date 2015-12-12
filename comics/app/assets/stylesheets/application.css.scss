@@ -39,7 +39,13 @@ h3{
 }
 
 h6{
-  font: 20px "Comic";
+  font: 15px "Comic";
+}
+
+div.comic {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 div.container {
@@ -56,11 +62,11 @@ div.container {
 }
 
 .thumbnail {
-  width: 100%;
+  width: 75%;
   height: 100%;
 }
 
 .cover {
-  width: 25%;
+  width: 75%;
   height: auto;
 }
