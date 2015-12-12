@@ -1,6 +1,12 @@
-<p>Username:
-<%= @user.username %>
-</p>
-
-
-<%= link_to "Back", root_path %>
+<br>
+<div class="row">
+  <div class="img">
+    <%= image_tag(root_url+ "images/comics.png") %>
+  </div>
+</div>
+<h1><%=@user.name %>'s Profile</h1>
+<hr>
+<br>
+<h3>Username: <%= @user.username %></h3>
+<h3>Email: <%= @user.email %></h3>
+<h3>Collection</h3>
