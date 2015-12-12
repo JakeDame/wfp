@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208014708) do
+ActiveRecord::Schema.define(version: 20151212050130) do
+
+  create_table "book_users", id: false, force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+  end
+
+  add_index "book_users", ["book_id"], name: "index_book_users_on_book_id"
+  add_index "book_users", ["user_id"], name: "index_book_users_on_user_id"
 
   create_table "books", force: :cascade do |t|
     t.integer  "publisher_id"

@@ -34,7 +34,7 @@
     <% elsif pub.name == "Marvel" %>
     <div class="row">
       <% pub.books.each do |marv| %>
-        <div class="small-2 columns end" data-equalizer-watch>
+        <div class="small-2 columns end">
           <div class="panel">
             <div class="thumbnail">
               <%= link_to image_tag(root_url + "images/" + marv.cover), marv %>
@@ -49,7 +49,7 @@
     <% elsif pub.name == "Image" %>
     <div class="row">
       <% pub.books.each do |img| %>
-        <div class="small-2 columns end" data-equalizer-watch>
+        <div class="small-2 columns end">
           <div class="panel">
             <div class="thumbnail">
               <%= link_to image_tag(root_url + "images/" + img.cover), img %>
