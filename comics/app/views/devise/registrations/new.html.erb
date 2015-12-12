@@ -1,39 +1,62 @@
-<h2>Sign up</h2>
+<div class="small-8 large-offset-2"> 
+  <h2>Register</h2> 
+  <h4 class="subheader">Fill out the form below to sign up.</h4> 
+  <hr> 
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %> 
+    <%= devise_error_messages! %> 
 
-  <div class ="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
+    <div class="row"> 
+      <div class="small-3 columns"> 
+        <%= f.label :name, :class => 'right inline' %> 
+      </div> <!-- class="small-3 columns" -->
+      <div class="small-9 columns"> 
+        <%= f.text_field :name %> 
+      </div> <!-- class="small-9 columns" -->
+    </div> <!-- class="row" -->
 
-  <div class ="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: false %>
-  </div>
+    <div class="row"> 
+      <div class="small-3 columns"> 
+        <%= f.label :username, :class => 'right inline' %> 
+      </div> <!-- class="small-3 columns" -->
+      <div class="small-9 columns"> 
+        <%= f.text_field :username %> 
+      </div> <!-- class="small-9 columns" -->
+    </div> <!-- class="row" -->
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: false %>
-  </div>
+    <div class="row"> 
+      <div class="small-3 columns"> 
+        <%= f.label :email, :class => 'right inline' %> 
+      </div> <!-- class="small-3 columns" -->
+      <div class="small-9 columns"> 
+        <%= f.email_field :email %> 
+      </div> <!-- class="small-9 columns" -->
+    </div> <!-- class="row" -->
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="row"> 
+      <div class="small-3 columns"> 
+        <%= f.label :password, :class => 'right inline' %> 
+      </div> <!-- class="small-3 columns" -->
+      <div class="small-9 columns"> 
+        <%= f.password_field :password %> 
+      </div> <!-- class="small-9 columns" -->
+    </div> <!-- class="row" -->
+    
+    <div class="row"> 
+      <div class="small-3 columns"> 
+        <%= f.label :password_confirmation, :class => 'right inline' %> 
+      </div> <!-- class="small-3 columns" -->
+      <div class="small-9 columns"> 
+         <%= f.password_field :password_confirmation %> 
+      </div> <!-- class="small-9 columns" -->
+    </div> <!-- class="row" -->
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="small-9 columns small-offset-3"> 
+      <%= f.submit "Sign up", :class => 'button' %> 
+    </div> <!-- class="small-9 columns small-offest-3"-->
+   
+    <div class="small-9 columns small-offset-3"> 
+      <%= render "devise/shared/links" %> 
+    </div> <!-- class="small-9 columns small-offest-3"-->
+   <% end %> <!-- form_for -->
+</div> <!-- class="small-8 large-offset-2" -->

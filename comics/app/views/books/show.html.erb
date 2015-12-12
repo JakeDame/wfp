@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row" data-equalizer>
+  <div class="small-4 columns">
+    <div class="panel" data-equalizer-watch>
+      <%= image_tag(root_url + "images/" + @book.cover) %>
+    </div> <!-- class="panel" -->
+  </div> <!--class="small-4 columns" -->
+  <div class="small-8 columns">
+    <div class="panel" data-equalizer-watch>
+      <br><br><br>
+      <br><br><br>
+      <h3>Title: <%= @book.title %></h3>
+      <h3>Writer: <%= @book.writer %></h3>
+      <h3>Artist: <%= @book.artist %></h3>
+      <h3>Release Date: <%= @book.releaseDate %></h3>
+    </div> <!-- class="panel" -->
+  </div> <!-- class="small-8 columns" -->
+</div> <!-- class="row" -->
+

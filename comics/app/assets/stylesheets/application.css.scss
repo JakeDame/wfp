@@ -14,21 +14,26 @@
  *= require_self
  */
 body {
-  background-color: #eee; 
+  background-color: #2b8fd9;
+  color: #ba1259;
 }
 
+h3,h2,h1 {
+  color: #8c1506;
+}
 div.container {
   text-align: left;
   padding: 4px;
   margin-top: 2px;
-  background-color: #99cbff;
+  background-color: #E9D92B;
 }
 
 .panel {
   padding: 0;
   border: none;
   width: 100%;
-  background-color: #99cbff;
+  background-color: #E9D92B;
+  text-align: center;
 }
 
 .thumbnail {

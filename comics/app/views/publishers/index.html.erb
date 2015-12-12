@@ -5,12 +5,13 @@
 <div class="row">
   <%= image_tag(root_url + "/images/comicsense.png", size: "425x150") %>
 
-  <h2>Releasing This Week: <small>(12/9/15)</small></h2>
+  <h1><b>Releasing This Week:</b></h1>
+  <h2>12/9/15</h2>
 </div>
 
   <% @publishers.each do |pub| %>
   <div class="row">
-  <h3><u><%= pub.name %></u></h3>
+  <h3><b><u><%= pub.name %></u></b></h3>
   <hr>
   </div>
     <% if pub.name == "DC" %>
@@ -19,7 +20,7 @@
         <div class="small-2 columns end">
           <div class="panel">
             <div class="thumbnail">
-              <%= image_tag(root_url + "images/" + dc.cover) %>
+              <%= link_to image_tag(root_url + "images/" + dc.cover), dc %>
             </div><!-- class="thumbnail"-->
             <div class="container">
               <h6><%= dc.title %></h6>
