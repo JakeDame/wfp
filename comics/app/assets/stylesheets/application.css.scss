@@ -13,16 +13,34 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #eee; 
+}
+
 div.container {
   text-align: center;
   padding: 15px;
   margin-top: 20px;
+  background-color: #b3ccff;
 }
+
 .panel {
   padding: 0;
   border: none;
-  width: 50%;
-}
-img {
   width: 100%;
+  background-color: #b3ccff;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.cover {
+  width: 25%;
+  height: auto;
+}
+
+.reveal-modal {
+  background: #b3ccff;
 }

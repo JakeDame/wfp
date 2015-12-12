@@ -1,5 +1,6 @@
 users = User.create(
   [
+    { email: 'j@j.com', name: "Jake Dame", username: "Jake", password: "j", password_confirmation: "j"},
     { email: 'a@a.com', name: "Mr. Aardvark", username: "Aardvark", password: "a", password_confirmation: "a"}
   ]
 )

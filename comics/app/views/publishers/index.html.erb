@@ -1,51 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to "current_user_show", current_user %>
+<%# link_to "current_user_show", current_user %>
 
-<h1>Comic Sense</h1>
+<%= image_tag(root_url + "/images/comicsense.png", size: "425x150") %>
 
 <h2>Releasing This Week: <small>(12/9/15)</small></h2>
+<hr>
 
 <% @publishers.each do |pub| %>
   <h3><u><%= pub.name %></u></h3>
+  <hr>
     <div class="row">
     <% if pub.name == "DC" %>
       <% pub.books.each do |dc| %>
-        <div class="large-4 columns">
+        <div class="col-md-4">
           <div class="panel">
-            <%= link_to image_tag(root_url + "/images/" + dc.cover, size: "120x200"), dc %>
-            <div class="container">
-              <%= dc.title %>
-             </div>
-          </div>
-        </div>
-      <%end %>
-      </div>
+             <div class="thumbnail">
+               <%= image_tag(root_url + "/images/" + dc.cover) %>
+             </div><!-- class="thumbnail"-->
+             <div class="container">
+               <a href="#" data-reveal-id="myModal"><h5><%= dc.title %></h5></a>
+
+               <div id="myModal" class ="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                 <h2 id="modalTitle"><%= dc.title %></h2>
+                   <div class="row">
+                     <div class="large-4 columns">
+                       <div class="panel">
+                         <p class="lead"><%= image_tag(root_url + "/images/" + dc.cover, size: "240x400") %></p>
+                       </div> <!-- id="modalTitle -->
+                     </div> <!-- class="large-4 columns" -->
+                     <div class="large-8 columns">
+                       <div class="panel">
+                         <p class="lead">Writer: <%= dc.writer %><br>
+                         Artist: <%= dc.artist %><br>
+                         Release Date: <%= dc.releaseDate %>
+                         </p>
+                       </div> <!-- class="panel" -->
+                     </div> <!-- class="large-8 columns" -->
+                   </div> <!-- class="row" -->
+                 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+               </div> <!-- id="myModal" -->
+
+            </div> <!-- class="container" -->
+          </div> <!-- class="panel" -->
+        </div> <!-- class="col-md-4" -->
+      <%end %> <!-- pub.books.each do |dc| -->
+      </div> <!-- class="row" -->
     <% elsif pub.name == "Marvel" %>
-      <% pub.books.each do |marv| %>
-        <div class="large-4 columns">
-          <div class="panel">
-            <%= link_to image_tag(root_url + "/images/" + marv.cover, size: "120x200"), marv %>
-            <div class="container">
-              <%= marv.title %>
-             </div>
-          </div>
-        </div>
-      <%end %>
-      </div>
     <% elsif pub.name == "Image" %>
-      <% pub.books.each do |img| %>
-        <div class="large-4 columns">
-          <div class="panel">
-            <%= link_to image_tag(root_url + "/images/" + img.cover, size: "120x200"), img %>
-            <div class="container">
-              <%= img.title %>
-             </div>
-          </div>
-        </div>
-      <%end %>
-      </div>
-    <% end %>
+    <% end %> <!-- if pub.name -->
 
 <% end %> 
 
