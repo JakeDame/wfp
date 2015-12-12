@@ -14,25 +14,44 @@
  *= require_self
  */
 body {
-  background-color: #2b8fd9;
-  color: #ba1259;
+  background: rgb(207,231,250);
+  background: -moz-linear-gradient(left,  rgba(207,231,250,1) 0%, rgba(99,147,193,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+  background: linear-gradient(to right,  rgba(207,231,250,1) 0%,rgba(99,147,193,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=1 );
 }
 
-h3,h2,h1 {
-  color: #8c1506;
+@font-face {
+  font-family: "Comic";
+  src: url('BadaboomBB_Reg.otf') format('truetype');
 }
+
+h1{
+  font: 60px "Comic";
+}
+
+h2{
+  font: 50px "Comic";
+}
+
+h3{
+  font: 40px "Comic";
+}
+
+h6{
+  font: 20px "Comic";
+}
+
 div.container {
   text-align: left;
   padding: 4px;
   margin-top: 2px;
-  background-color: #E9D92B;
 }
 
 .panel {
   padding: 0;
   border: none;
   width: 100%;
-  background-color: #E9D92B;
   text-align: center;
 }
 

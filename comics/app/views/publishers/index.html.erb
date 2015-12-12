@@ -3,9 +3,11 @@
 <%# link_to "current_user_show", current_user %>
 
 <div class="row">
-  <%= image_tag(root_url + "/images/comicsense.png", size: "425x150") %>
-
+  <div class="img">
+    <%= image_tag(root_url+ "images/comics.png") %>
+  </div>
   <h1><b>Releasing This Week:</b></h1>
+  <br>
   <h2>12/9/15</h2>
 </div>
 
@@ -35,7 +37,7 @@
         <div class="small-2 columns end" data-equalizer-watch>
           <div class="panel">
             <div class="thumbnail">
-              <%= image_tag(root_url + "images/" + marv.cover) %>
+              <%= link_to image_tag(root_url + "images/" + marv.cover), marv %>
              </div><!-- class="thumbnail"-->
              <div class="container">
                <h6><%= marv.title %></h6>
@@ -50,7 +52,7 @@
         <div class="small-2 columns end" data-equalizer-watch>
           <div class="panel">
             <div class="thumbnail">
-              <%= image_tag(root_url + "images/" + img.cover) %>
+              <%= link_to image_tag(root_url + "images/" + img.cover), img %>
              </div><!-- class="thumbnail"-->
              <div class="container">
                <h6><%= img.title %></h6>
